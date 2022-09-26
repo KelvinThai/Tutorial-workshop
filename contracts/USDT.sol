@@ -4,8 +4,8 @@ import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 import "openzeppelin-solidity/contracts/access/Ownable.sol";
 import "openzeppelin-solidity/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 import "hardhat/console.sol";
-contract Floppy is
-    ERC20("Floppy", "FLP"),
+contract USDT is
+    ERC20("USDT", "USDT"),
     ERC20Burnable,
     Ownable
 {
@@ -18,7 +18,7 @@ contract Floppy is
     function mint(address to, uint256 amount) public onlyOwner {
         require(
             ERC20.totalSupply() + amount <= cap,
-            "Floppy: cap exceeded"
+            "USDT: cap exceeded"
         );
         _mint(to, amount);
     }

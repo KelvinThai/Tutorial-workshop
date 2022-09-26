@@ -1,5 +1,6 @@
-require("@nomicfoundation/hardhat-toolbox");
-require('dotenv').config();
+import "@nomicfoundation/hardhat-toolbox";
+import * as dotenv from "dotenv";
+dotenv.config({ path: __dirname + "/.env" });
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.9",
@@ -12,5 +13,5 @@ module.exports = {
   etherscan: {
     apiKey: process.env.API_KEY
   }
-
 };
+
